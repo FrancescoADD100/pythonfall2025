@@ -1,7 +1,17 @@
 """
-    Create a Python application that allows users to input their total budget and the amounts
-    spent in various categories. The program will then calculate and display the percentage 
-    of the total budget each category represents.
+Design a Python program that prompts users to enter their total budget (ask them for their net monthly income) and amounts for spending categories:
+Housing (rent or mortgage)
+Utilities
+Groceries
+Transportation
+Health Care
+Personal Care
+Clothing
+Debt
+Calculate the percentage of the total budget spent in each category.
+Tell the user how much the spent total, and how much money they have left. 
+Display the results in a user-friendly format using f-strings.
+Ensure your code is well-commented to explain the functionality of different sections.
 """
 
 # Get the values from the user for each category
