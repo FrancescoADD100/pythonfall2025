@@ -5,21 +5,24 @@
 
 # Define a function to calculate letter grade based on numerical grade
 # Get the users grade
-numerical_grade = int(input("W hat numerical grade did the user get?"))
+numerical_grade = int(input("What numerical grade did the user get?"))
+
+# Check what numerical grade you need to be outside of the 100-0 grading range
+if numerical_grade > 100 or numerical_grade < 0: letter_grade = ("Error")
 
 # Check what numerical grade you need for a A
-if numerical_grade > 89: letter_grade = ("A")
+elif numerical_grade >= 90: letter_grade = ("A")
 
 # Check what numerical grade you need for a B
-elif numerical_grade > 79: letter_grade = ("B")
+elif numerical_grade >= 80: letter_grade = ("B")
 
 # Check what numerical grade you need for a C
-elif numerical_grade > 69: letter_grade = ("C")
+elif numerical_grade >= 70: letter_grade = ("C")
 
 # Check what numerical grade you need for a D
-elif numerical_grade > 59: letter_grade = ("D")
+elif numerical_grade >= 60: letter_grade = ("D")
 
-# Check what numerical grade you need for a F
+# Check what numerical grade you need for F
 else: letter_grade = ("F")
 
-print("The letter_grade will be", str(letter_grade))
+print("The letter_grade is:", str(letter_grade))
