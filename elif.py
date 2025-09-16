@@ -25,4 +25,4 @@ elif numerical_grade >= 60: letter_grade = ("D")
 # Check what numerical grade you need for F
 else: letter_grade = ("F")
 
-print("The letter_grade is:", str(letter_grade))
+print("The letter grade is:", str(letter_grade))
