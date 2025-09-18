@@ -4,25 +4,25 @@ Your task is to create a program that prompts the user for two integer inputs an
 """
 
 # Define variables
-House = ("bigger")
-Car = ("big")
-Phone = ("small")
+House = ("2200 sqft")
+Car = ("115 sqft")
+Phone = ("0.125 sqft")
 
 # and operator 
-if House > Car and House > Phone: print("House is bigger")
+if House > Car and House > Phone: print("House is the biggest")
 
-elif Car < House and Car > Phone: print("Car is big")
+elif Car < House and Car > Phone: print("Car is the biggest")
 
-else: print("phone is small")
+else: print("Phone is the biggest")
 
 # or operator
-if House > Car or House > Phone: print("House is bigger")
+if House > Car or House > Phone: print("House is the biggest")
 
-elif Car < House or Car > Phone:  print("Car is big")
+elif Car < House or Car > Phone:  print("Car is the biggest")
 
-else: print("phone is small")
+else: print("Phone is the biggest")
 
 # not operator
-if not House > Car: print("House is not bigger")
+if not House > Car: print("House is not bigger than Car")
 
-else: print("House is bigger")
+else: print("House is bigger than Car")
