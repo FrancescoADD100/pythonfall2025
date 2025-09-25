@@ -13,43 +13,28 @@ Try to use comparisons that could yield different results based on user input.
 """
 
 # Define variables in their square feet average 
-House = 2200 
-Car = 115 
-Phone = 0.125 
+HOUSE = 2200 
+CAR = 115 
+PHONE = 0.125 
 
 # Prompt user for two integers
-num1 = int(input("Enter the first integer: "))
-num2 = int(input("Enter the second integer: "))
+first_Sqft = int(input("Enter the first square footage: "))
+second_Sqft = int(input("Enter the second square footage: "))
 
-# and operator examples
-if num1 > Car and num2 > Phone:
-    print(f"{num1} > Car and {num2} > Phone: {num1 > Car and num2 > Phone}")
-else:
-    print(f"{num1} > Car and {num2} > Phone: {num1 > Car and num2 > Phone}")
+# AND operator examples
+print(f"{first_Sqft} > CAR and {second_Sqft} > PHONE: "
+      f"{first_Sqft > CAR and second_Sqft > PHONE}")
 
-if num1 < House and num2 < Car:
-    print(f"{num1} < House and {num2} < Car: {num1 < House and num2 < Car}")
-else:
-    print(f"{num1} < House and {num2} < Car: {num1 < House and num2 < Car}")
+print(f"{first_Sqft} < HOUSE and {second_Sqft} < CAR: "
+      f"{first_Sqft < HOUSE and second_Sqft < CAR}")
 
-# or operator examples
-if num1 == House or num2 == Car:
-    print(f"{num1} == House or {num2} == Car: {num1 == House or num2 == Car}")
-else:
-    print(f"{num1} == House or {num2} == Car: {num1 == House or num2 == Car}")
+# OR operator examples
+print(f"{first_Sqft} == HOUSE or {second_Sqft} == CAR: "
+      f"{first_Sqft == HOUSE or second_Sqft == CAR}")
 
-if num1 > Phone or num2 < Car:
-    print(f"{num1} > Phone or {num2} < Car: {num1 > Phone or num2 < Car}")
-else:
-    print(f"{num1} > Phone or {num2} < Car: {num1 > Phone or num2 < Car}")
+print(f"{first_Sqft} > PHONE or {second_Sqft} < CAR: "
+      f"{first_Sqft > PHONE or second_Sqft < CAR}")
 
-# not operator examples
-if not num1 < Car:
-    print(f"not ({num1} < Car): {not (num1 < Car)}")
-else:
-    print(f"{num1} < Car: {num1 < Car}")
-
-if not num2 > House:
-    print(f"not ({num2} > House): {not (num2 > House)}")
-else:
-    print(f"{num2} > House: {num2 > House}")
+# NOT operator examples
+print(f"not ({first_Sqft} < CAR): {not (first_Sqft < CAR)}")
+print(f"not ({second_Sqft} > HOUSE): {not (second_Sqft > HOUSE)}")
