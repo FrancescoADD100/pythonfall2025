@@ -8,25 +8,27 @@ If the customer selects an invalid or already sold seat, display a friendly erro
 Ensure the program gracefully handles all scenarios and is user-friendly.
 """
 
-# List number of seats
-seats = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-for seat in seats:
-    print("available seats are 1-20")
-    if seat:
-        print(f"this seat is available {seat}")
+# List of seats
+seats = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+print("Welcome to Ticket Sales")
+
+while True:
+    print("Available seats:", seats)
+    number = int(input("Enter the seat you want to purchase (0 to quit): "))
+    
+    if number == 0:
+        print("Thank you for purchasing tickets")
+        break
+    if number < 1 or number > 20:
+        print("That is not a valid seat. Pick 1-20")
     else:
-        print("This seat is not available")
-        number = 0
-        while number >= 1 or number <= 20:
-            number = int(input(f"You purchased number {seat}"))
-            if number < 1 or number > 20:
-                print(f"{number} is not available")
-                seats.remove(number)
-                for seat in seats:
-                    print(seat)
-
-
-
-
-
-
+        if number in seats:
+            seats.remove(number)
+            print("Seat", number, "Purchased")
+        else:
+            print("Seat already sold. Pick another")
+    
+    if len(seats) == 0:
+        print("All seats are sold out")
+        break
