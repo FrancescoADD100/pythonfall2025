@@ -19,6 +19,10 @@ for day in days:
     daily_steps = int(input(f"Enter the number of steps taken on {day}: "))
     steps.append(daily_steps)
 
-# Display daily steps
+# Display steps for each day
+for day, daily_steps in zip(days, steps):
+    print(f"On {day} you took {daily_steps} steps.")
+
+# Display total and average steps
 print("Total steps taken in the week:", sum(steps))
 print("Average steps per day:", sum(steps) / len(steps))
