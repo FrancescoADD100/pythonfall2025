@@ -18,23 +18,23 @@ CAR = 115
 PHONE = 0.125 
 
 # Prompt user for two integers
-first_Sqft = int(input("Enter the first square footage: "))
-second_Sqft = int(input("Enter the second square footage: "))
+first_sqft = int(input("Enter the first square footage: "))
+second_sqft = int(input("Enter the second square footage: "))
 
 # AND operator examples
-print(f"{first_Sqft} > CAR and {second_Sqft} > PHONE: "
-      f"{first_Sqft > CAR and second_Sqft > PHONE}")
+print(f"{first_sqft} > CAR and {second_sqft} > PHONE: "
+      f"{first_sqft > CAR and second_sqft > PHONE}")
 
-print(f"{first_Sqft} < HOUSE and {second_Sqft} < CAR: "
-      f"{first_Sqft < HOUSE and second_Sqft < CAR}")
+print(f"{first_sqft} < HOUSE and {second_sqft} < CAR: "
+      f"{first_sqft < HOUSE and second_sqft < CAR}")
 
 # OR operator examples
-print(f"{first_Sqft} == HOUSE or {second_Sqft} == CAR: "
-      f"{first_Sqft == HOUSE or second_Sqft == CAR}")
+print(f"{first_sqft} == HOUSE or {second_sqft} == CAR: "
+      f"{first_sqft == HOUSE or second_sqft == CAR}")
 
-print(f"{first_Sqft} > PHONE or {second_Sqft} < CAR: "
-      f"{first_Sqft > PHONE or second_Sqft < CAR}")
+print(f"{first_sqft} > PHONE or {second_sqft} < CAR: "
+      f"{first_sqft > PHONE or second_sqft < CAR}")
 
 # NOT operator examples
-print(f"not ({first_Sqft} < CAR): {not (first_Sqft < CAR)}")
-print(f"not ({second_Sqft} > HOUSE): {not (second_Sqft > HOUSE)}")
+print(f"not ({first_sqft} < CAR): {not (first_sqft < CAR)}")
+print(f"not ({second_sqft} > HOUSE): {not (second_sqft > HOUSE)}")
