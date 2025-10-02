@@ -9,14 +9,11 @@ Prompt the user for a non-negative integer and call factorial, printing the resu
 
 def factorial(n):
     if n == 1 or n == 0:
-        return n
-    else:
-        return n * factorial(n-1) if n > 1
-
+        return 1
 # Example usage
 def factorial():
     n = int(input("Enter non negative number:"))
     total_amount = factorial(n)
-    print(f"factorial of a number is {n}: {total_amount:,.2f}")
+    print(f"factorial of a number {n} is: {total_amount:,.2f}")
 
 factorial()
