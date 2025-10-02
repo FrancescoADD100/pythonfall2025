@@ -20,7 +20,9 @@ for day in days:
     steps.append(daily_steps)
 
 # Display steps for each day
-for day, daily_steps in zip(days, steps):
+for i in range(len(days)):
+    day = days[i]
+    daily_steps = steps[i]
     print(f"On {day} you took {daily_steps} steps.")
 
 # Display total and average steps
