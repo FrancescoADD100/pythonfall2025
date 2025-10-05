@@ -25,21 +25,21 @@ Sample Output:"""
 
 def calculate_interest(principal, rate, time):
 
-# Calculate simple interest with formula
+    # Calculate simple interest with formula
     interest = (principal * rate * time) / 100
     return interest
 
 def main():
 
- # Ask user for three values
+    # Ask user for three values
     principal = float(input("Enter principal amount: "))
     rate = float(input("Enter annual interest rate (percentage): "))
     time = float(input("Enter time in years: "))
 
-# Call function
+    # Call function
     simple_interest = calculate_interest(principal, rate, time)
 
- # Print result
+    # Print result
     print(f"The simple interest for ${principal:,.2f} at {rate}% over {time} years is ${simple_interest:,.2f}.")
 
 main()
