@@ -11,8 +11,7 @@ def main():
         'Database Essentials',
         'Web Development Basics',
         'Data Structures in Python',
-        'Web Design Fundamentals'
-    )
+        'Web Design Fundamentals')
 
     for course in programming_classes:
         print(course)
