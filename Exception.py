@@ -20,9 +20,14 @@ GitHub Upload: Upload your py file to GitHub and hand in the link
  """
 
 def square_number():
+    # Ask user to enter a number and calculate its square
     try:
         number = input("Enter a number to square: ")
         squared_number = int(number) ** 2
         print(f"The square of {number} is {squared_number}.")
     except ValueError:
         print("Error: Please enter a valid number.")
+
+# Call function
+square_number()
+
