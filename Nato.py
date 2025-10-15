@@ -46,6 +46,11 @@ X	X-ray
 Y	Yankee
 Z	Zulu
 """
+
+"""NATO Phonetic Translator
+This program asks the user for a word and then prints each letter
+with its matching NATO phonetic alphabet code word."""
+
 # NATO Phonetic Alphabet Dictionary
 NATO_ALPHABET = {'A': 'Alpha', 'B': 'Bravo', 'C': 'Charlie', 'D': 'Delta', 'E': 'Echo',
     'F': 'Foxtrot', 'G': 'Golf', 'H': 'Hotel', 'I': 'India', 'J': 'Juliett',
@@ -54,18 +59,21 @@ NATO_ALPHABET = {'A': 'Alpha', 'B': 'Bravo', 'C': 'Charlie', 'D': 'Delta', 'E': 
     'U': 'Uniform', 'V': 'Victor', 'W': 'Whiskey', 'X': 'X-ray', 
     'Y': 'Yankee', 'Z': 'Zulu'}
 
-def main():
-
-    # Prompt user for a word
-    word = input("Enter a word: ").upper()
+def spell_with_nato(word):
+    # Helper function to spell a word using NATO phonetic alphabet
 
     # Iterate through each letter in the word
     for letter in word:
-        
-        # Check if the letter is in the NATO_ALPHABET dictionary
-        if letter in NATO_ALPHABET:
+
+        # Only use alphabetic characters
+        if letter in NATO_ALPHABET: # Only letters A-Z
             print(f"{letter}: {NATO_ALPHABET[letter]}")
-        else:
-            print(f"{letter}: (not in NATO alphabet)")
+
+def main():
+    
+    # Prompt user for a word
+    word = input("Enter a word: ").upper()
+    spell_with_nato(word) # Helper function
 
 main()  
+
