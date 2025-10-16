@@ -31,35 +31,38 @@ Commenting:
 Include comments to explain key parts of the code."""
 
 # Conversion constants
-lb_to_kg = 0.453592
-in_to_m = 0.0254
+LB_TO_KG = 0.453592
+IN_TO_M = 0.0254
+
 def main():
-    # Prompt user for weight and height
+
+    # Prompt user for weight in pounds and height in inches
     weight_lb = float(input("Enter your weight in pounds: "))
     height_in = float(input("Enter your height in inches: "))
 
-    # Convert to metric units
-    weight_kg = weight_lb * lb_to_kg
-    height_m = height_in * in_to_m
+    # Convert weight to kilograms and height to meters
+    weight_kg = weight_lb * LB_TO_KG
+    height_m = height_in * IN_TO_M
 
     # Calculate BMI
     bmi = weight_kg / (height_m ** 2)
 
+    # Display BMI value
+    print(f"Your BMI is: {bmi:.2f}")
+
     # Determine BMI category
     if bmi < 18.5:
-        category = "Underweight"
+        print("You are classified as: Underweight")
     elif 18.5 <= bmi < 25:
-        category = "Normal weight (Healthy range)"
+        print("You are classified as: Normal weight")
     elif 25 <= bmi < 30:
-        category = "Overweight"
+        print("You are classified as: Overweight")
     elif 30 <= bmi < 35:
-        category = "Obesity class I (Moderate)"
+        print("You are classified as: Obesity class I")
     elif 35 <= bmi < 40:
-        category = "Obesity class II (Severe)"
+        print("You are classified as: Obesity class II")
     else:
-        category = "Obesity class III (Very severe)"
+        print("You are classified as: Obesity class III")
 
-    # Display BMI and category
-    print(f"Your BMI is: {bmi:.2f}")
-    print(f"You are classified as: {category}")
 main()
+    

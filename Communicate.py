@@ -19,9 +19,13 @@ Call the custom_song function with the user inputs as named arguments.
 Ensure the order of arguments matches the parameters in your function definition.
 """
 
-# Define the function to create a custom song
+# Define function to create a custom version of twinkle twinkle little star
 def custom_song(name, adjective1, noun1, place, verb, adjective2, noun2, emotion ):
+    
+    # Print blank line for clarity
     print("\n")
+
+    # Print the customized song lyrics using f-strings
     print(f"{name}, {name}, {adjective1} {noun1},")
     print(f"How I wonder what you are")
     print(f"Up above the {place} so high")
@@ -29,7 +33,7 @@ def custom_song(name, adjective1, noun1, place, verb, adjective2, noun2, emotion
     print(f"When you {verb}, I feel so {emotion}")
     print(f"{name}, {name}, {adjective1} {noun1}")
 
-# Collect user input
+# Collect user input for each variable
 input_name = input("Enter a name: ")
 input_adjective1 = input("Enter an adjective: ")
 input_noun1 = input("Enter a noun: ")
@@ -39,5 +43,5 @@ input_adjective2 = input("Enter another adjective: ")
 input_noun2 = input("Enter another noun: ")
 input_emotion = input("Enter an emotion: ")
 
-# Call the function with named arguments
+# Call function with named arguments
 custom_song(name = input_name, adjective1 = input_adjective1, noun1 = input_noun1, place = input_place, verb = input_verb, adjective2 = input_adjective2, noun2 = input_noun2, emotion = input_emotion)

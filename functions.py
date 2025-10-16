@@ -11,15 +11,23 @@ Display the result: "The area of the circle is [result] square units."
 Test Your Functions:
 Call square and circle with sample values."""
 
+# Global constant for Pi
+PI = 3.14
+
+# Function to calculate area of square
 def square(side):
+
+    # Formula for area of square
     area = side * side
     print(f"The area of the square is {area} square units.")
 
+# Function to calculate area of circle
 def circle(radius):
-    area = 3.14 * radius * radius
+
+    # Formula for area of circle
+    area = PI * radius * radius
     print(f"The area of the circle is {area} square units.")
 
 # Functions with sample values
 square(4)  
-
 circle(3)  
