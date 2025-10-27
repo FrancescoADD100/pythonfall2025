@@ -21,32 +21,39 @@ The loop should continue until the user guesses the correct number.
 Additional Notes:
 The abs() function is a built-in Python function used to calculate the absolute value of a number. The absolute value of a number is its distance from zero on the number line, regardless of direction. For example, abs(-5) and abs(5) both return 5."""
 
-# importing the random module to generate a random number
-import random
+def main():
+    # importing the random module to generate a random number
+    import random
 
-# Generate number between 1 and 100
-secret_number = random.randint(1, 100)
+    # Generate number between 1 and 100
+    secret_number = random.randint(1, 100)
 
-print("Im thinking of a number between 1 and 100.")
+    print("Im thinking of a number between 1 and 100.")
 
-# Start the guessing loop and ask the user for their guess
-while True:
-    guess = int(input("Take a guess: "))
-
-    difference = abs(secret_number - guess)
-
-# Check if the guess is correct or provide feedback
-    if guess == secret_number:
-        print("Congratulations! You've guessed the correct number.")
-        break
-    else:
-        if difference <= 5:
-            print("Very Hot")
-        elif difference <= 10:
-            print("Hot")
-        elif difference <= 20:
-            print("Warm")
-        elif difference <= 30:
-            print("Cold")
+    # Start the guessing loop and ask the user for their guess
+    while True:
+        try:
+            guess = int(input("Take a guess: "))
+        except ValueError:
+            print("Please enter a valid integer.")
         else:
-            print("Very Cold")
+            difference = abs(secret_number - guess)
+
+            # Check if the guess is correct 
+            if guess == secret_number:
+                print("Congratulations! You've guessed the correct number.")
+                break
+            else:
+                if difference <= 5:
+                    print("Very Hot")
+                elif difference <= 10:
+                    print("Hot")
+                elif difference <= 20:
+                    print("Warm")
+                elif difference <= 30:
+                    print("Cold")
+                else:   
+                    print("Very Cold")
+
+
+main()
