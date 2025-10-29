@@ -8,16 +8,22 @@ Do something meaningful or fun—be creative! You could build a number guessing 
 """
 
 def main():
+
+    # Ask the user to guess a number between 1 and 10
     print("Please guess a number between 1 and 10:")
 
     try:
         guess = int(input("Enter your guess: "))
 
+        # Check if the guess is within the valid range
         if guess < 1 or guess > 10:
             print("That number is out of range. Please enter a number between 1-10.")
+
+            #if the guess is valid, print the guessed number
         else:
             print(f"You guessed: {guess}")
 
+    # See if the user input is not a number
     except ValueError:
         print("That is not a number. Please enter a number between 1-10.")
 

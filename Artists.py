@@ -26,17 +26,20 @@ Updated list: ['The Beatles', 'Madonna', 'Taylor Swift', 'Elvis Presley', ...]
 Note to Students: This assignment is designed to test your understanding of exception handling in Python. Focus on how you can make your program robust against invalid user inputs and how to provide informative error messages. Good luck!
 """
 def main():
+
+    # List of top ten performing artists of all time
     top_artists = [
         "The Beatles", "Madonna", "Elton John", "Elvis Presley", "Mariah Carey",
         "Stevie Wonder", "Janet Jackson", "Michael Jackson", "Whitney Houston", "Rihanna"]
-
+    
+    # Prompt user for index and new artist name, with error handling
     try:
         index = int(input("Enter the index of the artist to replace (0-9): "))
         new_artist = input("Enter the new artist name: ")
         top_artists[index] = new_artist
 
     except (ValueError, IndexError):
-        print("That is not a number or not a number between 0-9, please enter a number between 0-9.")
+        print("That is not a number or a number between 0-9, please enter a number between 0-9.")
 
     else:
         print("Updated list:", top_artists)
