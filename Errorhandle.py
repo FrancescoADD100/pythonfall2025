@@ -27,4 +27,6 @@ def main():
     except ValueError:
         print("That is not a number. Please enter a number between 1-10.")
 
+    except KeyboardInterrupt: print("\nGame interrupted — goodbye!")
+
 main()
