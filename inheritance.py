@@ -52,12 +52,11 @@ class ProductionWorker(Employee):
 # Create instances of ProductionWorker
 worker1 = ProductionWorker("Ada", 22, 1, 16.00)
 worker2 = ProductionWorker("Jenny", 33, 2, 15.75)    
-worker3 = ProductionWorker("Angy", 44, 1, 35.00)
 
 # Display worker info
 print(f"Worker 1: {worker1.get_name()}, Number: {worker1.get_number()}, Shift: {worker1.get_shift_number()}, Pay Rate: ${worker1.get_hourly_pay_rate()}")
 print(f"Worker 2: {worker2.get_name()}, Number: {worker2.get_number()}, Shift: {worker2.get_shift_number()}, Pay Rate: ${worker2.get_hourly_pay_rate()}")
-print(f"Worker 3: {worker3.get_name()}, Number: {worker3.get_number()}, Shift: {worker3.get_shift_number()}, Pay Rate: ${worker3.get_hourly_pay_rate()}")
+
 
 
 
