@@ -14,17 +14,17 @@ the total price.
 # Class stubs
 
 class MenuItem:
-    """Represents a menu item with name and price"""
+    # Represents a menu item 
     def __init__(self, name, price):
         self.name = name
         self.price = price
 
     def display_info(self):
-        """Prints the menu item information"""
+        # Prints the menu item information
         
 
 class Order:
-    """Represents a customer's order"""
+        # Represents customer's order
     def __init__(self, main_item, rice, beans, protein):
         self.main_item = main_item
         self.rice = rice
@@ -34,59 +34,59 @@ class Order:
         self.total = 0.0
 
     def add_extra(self, extra):
-        """Adds an extra item to the order"""
+        # Adds an extra item to the order
         
 
     def calculate_total(self):
-        """Calculates total price of the order"""
+        # Calculates total price of the order
         
 
     def show_order(self):
-        """Displays the order details"""
+        # Displays the order details
         
 
 class ChipotleSystem:
-    """Represents the ordering system"""
+    # Represents the ordering system
     def __init__(self):
         self.menu = []
         self.order = None
 
     def show_menu(self):
-        """Displays all items in the menu"""
+        # Displays all items in the menu
         
 
     def take_order(self, main_item, rice, beans, protein):
-        """Creates a new order"""
+        # Creates a new order
         
 
     def display_total(self):
-        """Displays total price of the order"""
+        # Displays total price of the order
         
 
 # Function stubs
 
 def directions():
-    """Prints welcome message and instructions"""
+    # Prints welcome message and instructions
     
 
 def get_main_item():
-    """Select main item (Bowl or Burrito)"""
+    # Select main item (Bowl or Burrito)
     
 
 def get_rice():
-    """Select rice type"""
+    # Select rice type
     
 
 def get_beans():
-    """Select beans type"""
+    # Select beans type
     
 
 def get_protein():
-    """Select protein type"""
+    # Select protein type
     
 
 def get_extras():
-    """Select extra items"""
+    # Select extra items
     
 
 # Connectivity Check - main program
@@ -97,17 +97,15 @@ def main():
     # Create sample menu items
     bowl = MenuItem("Bowl", 10.50)
     burrito = MenuItem("Burrito", 11.50)
-    guacamole = MenuItem("Guacamole", 2.0)
-    extra_protein = MenuItem("Extra Protein", 3.0)
+    
+    system.menu = [bowl, burrito]
 
-    system.menu = [bowl, burrito, guacamole, extra_protein]
-
-    # Simulate choosing a main item
+    # Example of choosing a main item
     main_item = bowl
     rice = "White"
     beans = "Black"
     protein = "Chicken"
-    extras = [guacamole]
+    extras = "guacamole"
 
     # Take order
     system.take_order(main_item, rice, beans, protein)
@@ -135,3 +133,5 @@ if len(system.order.extras) > 0:
         print("-", extra.name)
 
 print("Total:", system.order.total)
+
+main()
