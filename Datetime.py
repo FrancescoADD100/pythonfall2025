@@ -28,6 +28,8 @@ Use try-except blocks to handle any potential input errors."""
 from datetime import datetime
 
 def main():
+
+    print("\n\n")
     
     try:
         # Get today's date
